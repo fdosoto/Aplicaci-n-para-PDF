@@ -100,12 +100,10 @@ class button(QPushButton):
 		super().__init__()
 		self.setText(label_text)
 		self.setStyleSheet('''
-			font-size: 30px;
-			width: 180px;
+			font-size: 20px;
+			width: 100px;
 			height: 50px;
 			''')
-
-
 
 
 class PDFApp(QWidget):
@@ -181,7 +179,8 @@ class PDFApp(QWidget):
 		dlg.show()
 
 	def _getSaveFilePath(self):
-		file_save_path, _ = QFileDialog.getSaveFileName(self, 'Guardar Archivo PDF', os.getcwd(), 'PDF File(*.pdf)')
+		file_save_path, _ = QFileDialog.getSaveFileName(self, 'Guardar Archivo PDF', \
+		os.getcwd(), 'PDF File(*.pdf)')
 		return file_save_path
 
 
